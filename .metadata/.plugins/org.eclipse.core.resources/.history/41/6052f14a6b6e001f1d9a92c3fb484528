@@ -1,0 +1,11 @@
+package com.example.demo.lombok;
+
+import lombok.Getter;
+
+@Getter
+public class Person {
+	
+	String name;
+	int age;
+
+}

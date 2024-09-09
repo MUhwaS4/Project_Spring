@@ -1,0 +1,24 @@
+package com.example.demo.di;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.example.demo.lombok.di.Chef;
+import com.example.demo.lombok.di.Restaurant;
+import com.example.demo.lombok.di.백종원;
+
+@SpringBootTest
+public class RestaurantTest {
+	
+	Restaurant restaurant = new Restaurant();
+	
+	Chef chef = new 백종원();
+	
+	@Test
+	void 테스트() {
+		System.out.println("restaurant: " + restaurant);
+		System.out.println("chef: " + chef);
+		System.out.println("getChef(): " + restaurant.getChef());
+	}
+	
+}

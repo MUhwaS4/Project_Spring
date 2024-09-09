@@ -1,0 +1,8 @@
+package com.example.demo.lombok;
+
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest // 스프링 컨테이너 환경
+public class PersonTest {
+
+}

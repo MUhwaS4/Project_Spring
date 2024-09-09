@@ -1,0 +1,6 @@
+package com.example.demo.lombok.di;
+
+@com
+public interface Chef {
+
+}
