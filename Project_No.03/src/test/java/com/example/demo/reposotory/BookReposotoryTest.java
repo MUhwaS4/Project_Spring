@@ -56,7 +56,6 @@ public class BookReposotoryTest {
 						.publisher("한빛출판사")
 						.title("자바프로그래밍입문")
 						.build();
-		list.add(book1);
 		
 		Book book2 = Book
 						.builder()
@@ -64,7 +63,6 @@ public class BookReposotoryTest {
 						.publisher("남가람북스")
 						.title("스프링부트프로젝트")
 						.build();
-		list.add(book2);
 		
 		Book book3 = Book
 						.builder()
@@ -72,7 +70,6 @@ public class BookReposotoryTest {
 						.publisher("남가람북스")
 						.title("실무로 끝내는 PHP")
 						.build();
-		list.add(book3);
 		
 		Book book4 = Book
 						.builder()
@@ -80,6 +77,10 @@ public class BookReposotoryTest {
 						.publisher("이지스퍼블리싱")
 						.title("알고리즘코딩테스트")
 						.build();
+		
+		list.add(book1);
+		list.add(book2);
+		list.add(book3);
 		list.add(book4);
 		
 		bookReposotory.saveAll(list);

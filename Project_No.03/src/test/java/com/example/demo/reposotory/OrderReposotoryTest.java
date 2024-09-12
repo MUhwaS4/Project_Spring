@@ -41,8 +41,13 @@ public class OrderReposotoryTest {
 	
 	@Test
 	public void 데이터추가() {
+		
+		// 3번 문제. 데이터 자료형: LocalDate
+		// 날짜를 직접 생성해서 저장 (인스턴스 직접 생성)
+		
 		List<Order> list = new ArrayList<>();
 		
+		// 1. 날짜를 먼저 생성하고 Order에 사용
 		LocalDate localDate1 = LocalDate.of(2023, 7, 1);
 		LocalDate localDate2 = LocalDate.of(2023, 7, 2);
 		LocalDate localDate3 = LocalDate.of(2023, 7, 3);
@@ -52,6 +57,9 @@ public class OrderReposotoryTest {
 		Order order3 = new Order(0, "도우너", localDate3, "부산 동래동");
 		Order order4 = new Order(0, "마이콜", localDate1, null);
 		Order order5 = new Order(0, "고길동", localDate2, null);
+		
+			// 2. Order 생성 시 date 동시 생성 역시 가능
+			// Order order5 = new Order(0, "고길동", LocalDate.of(2023, 7, 2), null);
 		
 		list.add(order1);
 		list.add(order2);

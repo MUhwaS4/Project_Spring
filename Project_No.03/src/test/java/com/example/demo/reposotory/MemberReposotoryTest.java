@@ -43,10 +43,13 @@ public class MemberReposotoryTest {
 	@Test
 	public void 데이터추가() {
 		List<Member> list = new ArrayList<>();
+
+		// 4번 문제. 데이터 자료형: LocalDate
+		// 시스템이 현재 시간을 자동으로 저장 (JPA 기능 활용)
 		
 		Member member1 = Member
 							.builder()
-							.user_id("admin")
+							.user_id("yoyt22")
 							.grade("관리자")
 							.password("1234")
 							.build();
@@ -55,7 +58,7 @@ public class MemberReposotoryTest {
 		
 		Member member2 = Member
 							.builder()
-							.user_id("user")
+							.user_id("user2")
 							.grade("사용자")
 							.password("1234")
 							.build();

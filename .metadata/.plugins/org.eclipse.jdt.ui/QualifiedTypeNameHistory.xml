@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.example.demo.di.Manager"/>
-    <fullyQualifiedTypeName name="com.example.demo.di.Doctor"/>
-    <fullyQualifiedTypeName name="com.example.demo.di.Hospital"/>
-    <fullyQualifiedTypeName name="com.example.demo.di.ScienceTeacher"/>
-    <fullyQualifiedTypeName name="com.example.demo.di.MathTeacher"/>
-    <fullyQualifiedTypeName name="com.example.demo.di.Teacher"/>
-    <fullyQualifiedTypeName name="jakarta.annotation.Generated"/>
-    <fullyQualifiedTypeName name="com.example.demo.reposotory.MemoReporsitory"/>
-    <fullyQualifiedTypeName name="com.example.demo.entity.Memo"/>
-    <fullyQualifiedTypeName name="com.example.demo.reposotory.MemoReporsitoryTest1_1"/>
-    <fullyQualifiedTypeName name="java.security.PublicKey"/>
-    <fullyQualifiedTypeName name="org.springframework.data.annotation.LastModifiedDate"/>
-    <fullyQualifiedTypeName name="java.lang.SuppressWarnings"/>
-    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.config.EnableJpaAuditing"/>
-    <fullyQualifiedTypeName name="javax.swing.border.Border"/>
     <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.cdi.JpaRepositoryExtension"/>
     <fullyQualifiedTypeName name="com.example.demo.reposotory.BoardReposotory"/>
@@ -24,7 +9,6 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="com.example.demo.entity.Gift"/>
     <fullyQualifiedTypeName name="com.example.demo.reposotory.GiftReposotoryTest"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="lombok.ToString"/>
     <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
     <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
@@ -49,15 +33,31 @@
     <fullyQualifiedTypeName name="jakarta.persistence.EntityListeners"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.domain.support.AuditingEntityListener"/>
     <fullyQualifiedTypeName name="org.springframework.data.annotation.CreatedDate"/>
-    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="org.checkerframework.checker.guieffect.qual.SafeType"/>
-    <fullyQualifiedTypeName name="org.springframework.boot.test.context.SpringBootTest"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.junit.platform.commons.util.PackageUtils"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="com.example.demo.entity.Member"/>
     <fullyQualifiedTypeName name="com.example.demo.reposotory.MemberReposotoryTest"/>
+    <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JacksonInject.Value"/>
+    <fullyQualifiedTypeName name="java.lang.SuppressWarnings"/>
+    <fullyQualifiedTypeName name="org.hibernate.query.Page"/>
+    <fullyQualifiedTypeName name="net.bytebuddy.asm.Advice.OffsetMapping.Sort"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.Pageable"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.PageRequest"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
+    <fullyQualifiedTypeName name="com.example.demo.reposotory.MemoReporsitory"/>
+    <fullyQualifiedTypeName name="jakarta.transaction.Transactional"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.test.context.SpringBootTest"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.example.demo.reposotory.MemoReporsitory2"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.springframework.data.repository.query.Param"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Modifying"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="com.example.demo.entity.Memo"/>
 </qualifiedTypeNameHistroy>

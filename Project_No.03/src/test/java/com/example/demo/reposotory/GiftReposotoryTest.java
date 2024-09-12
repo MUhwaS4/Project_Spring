@@ -49,7 +49,6 @@ public class GiftReposotoryTest {
 						.price(10000)
 						.type("식품")
 						.build();
-		list.add(gift1);
 		
 		Gift gift2 = Gift
 						.builder()
@@ -57,7 +56,6 @@ public class GiftReposotoryTest {
 						.price(20000)
 						.type("식품")
 						.build();
-		list.add(gift2);
 		
 		Gift gift3 = Gift
 						.builder()
@@ -65,7 +63,6 @@ public class GiftReposotoryTest {
 						.price(20000)
 						.type("생활용품")
 						.build();
-		list.add(gift3);
 		
 		Gift gift4 = Gift
 						.builder()
@@ -73,7 +70,6 @@ public class GiftReposotoryTest {
 						.price(40000)
 						.type("생활용품")
 						.build();
-		list.add(gift4);
 		
 		Gift gift5 = Gift
 						.builder()
@@ -81,7 +77,6 @@ public class GiftReposotoryTest {
 						.price(50000)
 						.type("생활용품")
 						.build();
-		list.add(gift5);
 		
 		Gift gift6 = Gift
 						.builder()
@@ -89,7 +84,6 @@ public class GiftReposotoryTest {
 						.price(20000)
 						.type("가전제품")
 						.build();
-		list.add(gift6);
 		
 		Gift gift7 = Gift
 						.builder()
@@ -97,6 +91,13 @@ public class GiftReposotoryTest {
 						.price(20000)
 						.type("가전제품")
 						.build();
+		
+		list.add(gift1);
+		list.add(gift2);
+		list.add(gift3);
+		list.add(gift4);
+		list.add(gift5);
+		list.add(gift6);
 		list.add(gift7);
 						
 		giftReposotory.saveAll(list);

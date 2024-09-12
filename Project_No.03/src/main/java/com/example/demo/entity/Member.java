@@ -39,7 +39,7 @@ public class Member {
 	@Column(length = 255, nullable = false)
 	String password;
 	
-	@CreatedDate
+	@CreatedDate // 데이터를 생성(추가)했을 때 딱 한 번 작성되는 날짜 데이터
 	@DateTimeFormat(pattern = "yyyy-MM-dd") // 날짜 포맷
 	@Column(nullable = false)
 	LocalDate registerDate;
