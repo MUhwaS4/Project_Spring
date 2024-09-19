@@ -49,7 +49,7 @@ public class MemberReposotoryTest {
 		
 		Member member1 = Member
 							.builder()
-							.user_id("yoyt22")
+							.user_id("admin")
 							.grade("관리자")
 							.password("1234")
 							.build();
@@ -58,12 +58,30 @@ public class MemberReposotoryTest {
 		
 		Member member2 = Member
 							.builder()
-							.user_id("user2")
+							.user_id("user1")
 							.grade("사용자")
 							.password("1234")
 							.build();
 		
 		list.add(member2);
+		
+		Member member3 = Member
+							.builder()
+							.user_id("yoyt22")
+							.grade("관리자")
+							.password("1234")
+							.build();
+		
+		list.add(member3);
+		
+		Member member4 = Member
+							.builder()
+							.user_id("user2")
+							.grade("사용자")
+							.password("1234")
+							.build();
+		
+		list.add(member4);
 		
 		memberReposotory.saveAll(list);
 		
@@ -80,6 +98,26 @@ public class MemberReposotoryTest {
 	@Test
 	public void 데이터삭제() {
 		memberReposotory.deleteById("user");
+	}
+	
+	// Q8.
+	
+	@Test
+	public void Q8아이디검색() {
+		List<Member> list = memberReposotory.getQuiz81("user");
+		
+		for (Member member : list) {
+			System.out.println(member);
+		}
+	}
+	
+	@Test
+	public void Q8관리자검색() {
+		List<Member> list = memberReposotory.getQuiz82("관리자");
+		
+		for (Member member : list) {
+			System.out.println(member);
+		}
 	}
 
 }

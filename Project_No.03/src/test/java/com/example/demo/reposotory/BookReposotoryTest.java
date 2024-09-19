@@ -104,5 +104,34 @@ public class BookReposotoryTest {
 		bookReposotory.deleteById(2);
 		
 	}
+	
+	// Q5.
+	
+	@Test
+	public void Q5제목검색() {
+		List<Book> list = bookReposotory.getQuiz51("자바프로그래밍입문");
+		
+		for (Book book : list) {
+			System.out.println(book);
+		}
+	}
+	
+	@Test
+	public void Q5가격출판사검색() {
+		List<Book> list = bookReposotory.getQuiz52(30000,"남가람북스");
+		
+		for (Book book : list) {
+			System.out.println(book);
+		}
+	}
+	
+	@Test
+	public void Q5출판사or검색() {
+		List<Book> list = bookReposotory.getQuiz53("한빛출판사","이지스퍼블리싱");
+		
+		for (Book book : list) {
+			System.out.println(book);
+		}
+	}
 
 }

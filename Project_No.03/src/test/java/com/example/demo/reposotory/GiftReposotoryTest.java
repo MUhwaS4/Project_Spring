@@ -116,5 +116,34 @@ public class GiftReposotoryTest {
 	public void 데이터삭제() {
 		giftReposotory.deleteById(2);
 	}
+	
+	// Q6.
+	
+	@Test
+	public void Q6가격검색() {
+		List<Gift> list = giftReposotory.getQuiz61(50000);
+		
+		for (Gift gift : list) {
+			System.out.println(gift);
+		}
+	}
+	
+	@Test
+	public void Q6이름검색() {
+		List<Gift> list = giftReposotory.getQuiz62("%세트");
+		
+		for (Gift gift : list) {
+			System.out.println(gift);
+		}
+	}
+	
+	@Test
+	public void Q6가격품목검색() {
+		List<Gift> list = giftReposotory.getQuiz63(40000, "생활용품");
+		
+		for (Gift gift : list) {
+			System.out.println(gift);
+		}
+	}
 
 }

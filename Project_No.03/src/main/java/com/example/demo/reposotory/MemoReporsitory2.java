@@ -38,7 +38,10 @@ public interface MemoReporsitory2 extends JpaRepository<Memo, Integer> {
 	List<Memo> get3(@Param("p1") int from, @Param("p2") int to);
 	// (@Param(파라미터명) 변수명, @Param(파라미터명) 변수명)
 	
+	//
+	
 	// 순수한 Sql 사용하기!
+	
 	@Query(value = "SELECT * FROM tbl_memo ORDER BY NO DESC", nativeQuery =  true)
 	List<Memo> get4();
 	

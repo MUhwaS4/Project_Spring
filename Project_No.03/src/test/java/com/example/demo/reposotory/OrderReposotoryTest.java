@@ -83,5 +83,26 @@ public class OrderReposotoryTest {
 	public void 데이터삭제() {
 		orderReposotory.deleteById(2);
 	}
+	
+	// Q7.
+	
+	@Test
+	public void Q7주소지검색() {
+		List<Order> list = orderReposotory.getQuiz71("인천");
+		
+		for (Order order : list) {
+			System.out.println(order);
+		}
+	}
+	
+	@Test
+	public void Q7주문일검색() {
+		LocalDate date = LocalDate.of(2023, 7, 3);
+		List<Order> list = orderReposotory.getQuiz72(date);
+		
+		for (Order order : list) {
+			System.out.println(order);
+		}
+	}
 
 }
