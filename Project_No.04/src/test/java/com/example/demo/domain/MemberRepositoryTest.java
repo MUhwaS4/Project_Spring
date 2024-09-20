@@ -31,21 +31,19 @@ public class MemberRepositoryTest {
 
 		repository.save(member1);
 		repository.save(member2);
-		System.out.println("회원이 추가되었습니다!");
+		System.out.println("회원이 추가되었습니다!\n");
 		
 		// 회원 목록 조회
 		System.out.println(repository.findAll());
-		System.out.println("회원 목록을 조회합니다.");
+		System.out.println("회원 목록을 조회합니다.\n");
 		
 		// 1번째 회원 조회
 		System.out.println(repository.findById(1));
-		System.out.println("회원을 조회합니다.");
+		System.out.println("회원을 조회합니다.\n");
 		
 		// 모든 회원 삭제
 		repository.clearStore();
 		System.out.println("모든 회원 정보가 삭제되었습니다.");
-		
-		
 		
 	}
 
