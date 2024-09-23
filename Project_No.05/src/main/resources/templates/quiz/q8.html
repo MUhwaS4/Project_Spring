@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+table, tr, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th, td {
+	width: 150px;
+	height: 30px;
+	text-align: center;
+}
+
+</style>
+
+</head>
+<body>
+
+<table>
+	<tbody>
+		<tr>
+			<th>성</th>
+			<th>이름</th>
+			<th>나이</th>
+			<th>주소</th>
+			<th>인천 거주 여부</th>
+		</tr>
+		<tr th:each="dto : ${list}">
+			<td th:text="${#strings.substring(dto.name, 0, 1)}"></td>
+			<td th:text="${#strings.substring(dto.name, 1)}"></td>
+			<td>[[${dto.age}]]</td>
+			<td>[[${dto.address}]]</td>
+			<td th:text="${#strings.startsWith(dto.address, '인천')}?거주:비거주"></td>
+		</tr>
+	</tbody>
+</table>
+
+</body>
+</html>

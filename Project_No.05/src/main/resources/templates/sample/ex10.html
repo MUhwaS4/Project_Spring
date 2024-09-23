@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<!-- 타임리프의 인라인 속성을 사용하기 전 -->
+	<script>
+		
+/* 		let msg = [[${result}]];
+		let dto = [[${dto}]]; */
+	
+	</script>
+	
+	<!-- 타임리프의 인라인 속성을 사용 후 -->
+	<!-- 객체를 자동으로 JSON 형식으로 변환함 -->
+	<script th:inline="javascript">
+		
+		// 자바스크립트 자료형에 맞게 변환해줘서 바로 사용 가능
+		let msg = [[${result}]]; /* 문자열로 변환 | "success" */
+		let dto = [[${dto}]]; /* 객체로 변환 | {"no":1,"text":"aaa","regDate":"2024-09-23"} */
+		console.log(dto.text); /* aaa */
+	
+	</script>
+
+</body>
+</html>

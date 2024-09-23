@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>블록 태그</h1>
+	
+	<p th:each="dto: ${list}">p태그</p>
+	
+	<!-- 블록 태그를 사용하면 여러가지 하위 태그를 넣을 수 있음 -->
+	<th:block th:each="dto: ${list}">
+		<p>p태그</p>
+		<span>span태그</span>
+	</th:block>
+
+</body>
+</html>

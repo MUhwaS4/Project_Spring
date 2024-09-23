@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+table, tr, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th, td {
+	width: 150px;
+	height: 30px;
+	text-align: center;
+}
+
+.hide {
+	display: none;
+}
+</style>
+
+</head>
+<body>
+
+<table>
+	<tbody>
+		<tr>
+			<th>성</th>
+			<th>이름</th>
+			<th>나이</th>
+			<th>주소</th>
+		</tr>
+		<tr th:each="dto : ${list}" th:if="${dto.age}<20">
+		<!-- th:if는 조건을 만족한 경우에만 태그를 생성하므로 if를 사용해도 좋고 -->
+		<!-- th:class="${dto.age}>19?hide:''"> 로 숨김 클래스를 추가해도 됨 -->
+		<!-- th:block에 반복문 쓰고 이후 tr로 조건문 거는 것도 가능 -->
+			<td th:text="${#strings.substring(dto.name, 0, 1)}"></td>
+			<td th:text="${#strings.substring(dto.name, 1)}"></td>
+			<td>[[${dto.age}]]</td>
+			<td>[[${dto.address}]]</td>
+		</tr>
+	</tbody>
+</table>
+
+</body>
+</html>
