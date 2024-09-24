@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<!-- 코드 조각 만들고, 다른 페이지에 전달하기 -->
+
+<!-- th:replace: 현재 파일에 정의된 조각을 exLayout3 파일로 전달 -->
+<!-- setContent(...): setContent 함수에 content 전달 -->
+
+<!-- ~{레이아웃 파일명(경로) :: setContent(~{this::명칭})}: 조각 표현식 -->
+<th:block th:replace="~{layout/exLayout3 :: setContent(~{this::content})}">
+
+<!-- content라는 이름으로 조각 만들기 -->
+<h1 th:fragment="content">프레그먼트조각1</h1>
+
+</th:block>
