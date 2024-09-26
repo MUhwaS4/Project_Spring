@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<!-- 2. basic 페이지에 조각을 전달 -->
+<th:block th:replace="~{layout/basic :: setContent(~{this::content})}">
+
+<!-- 1. content라는 이름으로 조각 정의하기 -->
+<th:block th:fragment="content">
+
+<h1>Board List Page
+    <span>
+        <a href="/board/register">
+            <button type="button" class="btn btn-outline-primary"> 게시물 등록</button>
+        </a>
+    </span>
+</h1>
+
+<!-- [[${list}]] -->
+
+<table class="table table-striped">
+    <!-- 부트스트랩의 스타일 적용 -->
+    <thead>
+	    <tr>
+	        <th>#</th>
+	        <th>제목</th>
+	        <th>작성자</th>
+	        <th>등록일</th>
+	    </tr>
+	</thead>
+	<tbody>
+	    <tr th:each="dto : ${list}">
+	    	
+	        <td>
+	        	<!-- 링크 표현식 @{} -->
+	        	<!-- /board/read?no=1 -->
+	        	<!-- (no=${dto.no})는 파라미터로 처리 -->
+	        	<a th:href="@{/board/read(no=${dto.no})}">[[${dto.no}]]</a>
+	        </td>
+	        <td>[[${dto.title}]]</td>
+	        <td>[[${dto.writer}]]</td>
+	        <td>[[${#temporals.format(dto.regDate, 'yyyy/MM/dd')}]]</td>
+	    </tr>
+    </tbody>
+
+</table>
+
+</th:block>
+
+</th:block>
+
+
+<!-- 전달받은 자바의 데이터를 자바스크립트의 자료형으로 변환하는 기능 -->
+<script th:inline="javascript">
+
+	/* 화면이 처음 로드 될 때 새로운 게시물의 번호를 표시 */
+	$(document).ready (
+		function() {
+			let no = [[${no}]];
+			
+			/* 새로운 게시물 번호가 있는 경우에만 표시 */
+			if (no != null) {
+				alert(no +"번 글이 등록되었습니다.");
+			}
+		}
+	);
+	
+</script>
