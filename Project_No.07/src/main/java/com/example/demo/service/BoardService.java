@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import java.util.List;
+import org.springframework.data.domain.Page;
 
 import com.example.demo.dto.BoardDTO;
 import com.example.demo.entity.Board;
@@ -23,13 +23,17 @@ public interface BoardService {
 	int register(BoardDTO dto);
 	
 	// 게시물 목록 조회 메소드
-	List<BoardDTO> getList();
+//	List<BoardDTO> getList();
+	// 페이지 번호를 받아서 특정 페이지의 번호를 반환하도록 수정
+	Page<BoardDTO> getList(int pageNumber);
 	
 	// 게시물 상세 조회 메소드
 	BoardDTO read(int no);
 	
 	// 게시물 수정 메소드
 	void modify(BoardDTO dto);
+	
+	void remove(int no);
 	
 	// 컨트롤러가 DTO를 받아서 서비스에 전달하고
 	// 서비스는 DTO를 Entity로 변환해서 리파지토리에 전달

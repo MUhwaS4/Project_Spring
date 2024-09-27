@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+
+<!-- 조각 만들어서 파라미터로 전달하기 -->
+
+<th:block th:replace="~{layout/basic :: setContent(~{this::content})}">
+
+<!-- content라는 이름으로 조각 만들기 -->
+<h1 th:fragment="content">exSidebar Page</h1>
+
+</th:block>
