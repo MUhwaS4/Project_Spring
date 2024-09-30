@@ -18,3 +18,5 @@
 2024-09-27 11:25:21,549 [Worker-125: Advanced source lookup job] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-commons/3.3.4/spring-data-commons-3.3.4-sources.jar
 2024-09-30 08:53:54,908 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2024-09-30 11:00:43,462 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-09-30 11:21:35,195 [Worker-19: Cloning from https://github.com/MUhwaS4/test_Spring.git] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[C:\Users\G201\git\test_Spring\.git]
+2024-09-30 11:48:05,791 [Worker-43: Remove Repositories] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[C:\Kimseoyeon\test_Spring\test_Spring\.git]
