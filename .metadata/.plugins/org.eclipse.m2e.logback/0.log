@@ -20,3 +20,4 @@
 2024-09-30 11:00:43,462 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2024-09-30 11:21:35,195 [Worker-19: Cloning from https://github.com/MUhwaS4/test_Spring.git] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[C:\Users\G201\git\test_Spring\.git]
 2024-09-30 11:48:05,791 [Worker-43: Remove Repositories] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[C:\Kimseoyeon\test_Spring\test_Spring\.git]
+2024-10-02 09:05:43,415 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
