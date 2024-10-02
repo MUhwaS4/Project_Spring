@@ -27,5 +27,33 @@ public class MemberServiceTest {
 		}
 		
 	}
+	
+	@Test
+	public void 회원등록() {
+		
+		MemberDTO dto = MemberDTO.builder()
+								.id("user31")
+								.password("1234")
+								.name("짱구")
+								.build();
+		
+		boolean isSuccess = service.register(dto);
+		
+		if (isSuccess) {
+			System.out.println("회원이 등록되었습니다.");
+		} else {
+			System.out.println("중복된 회원입니다.");
+		}
+		
+	}
+	
+	@Test
+	public void 회원단건조회() {
+		
+		MemberDTO dto = service.read("user31");
+		
+		System.out.println(dto);
+		
+	}
 
 }
