@@ -22,5 +22,6 @@ public class MemberDTO {
 	String name; // 이름
 	LocalDateTime regDate; // 등록일
 	LocalDateTime modDate; // 수정일
+	String role; // 사용자 등급 (예: ROLE_UESR, ROLE_ADMIN)
 
 }
