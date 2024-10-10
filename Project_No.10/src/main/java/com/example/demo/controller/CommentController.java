@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,10 +34,15 @@ public class CommentController {
 	
 	// 댓글 등록 처리 메소드
 	@PostMapping("/register")
-	public int register(CommentDTO dto) {
+	// 매개변수에 Principal를 선언하면, 스프링 컨테이너가 빈을 꺼내서 인증 객체를 주입함
+	public int register(CommentDTO dto, Principal principal) {
+		
+		// 로그인 한 사용자의 아이디를 꺼내서 DTO에 업데이트
+		String id = principal.getName();
+		dto.setWriter(id);
 		
 		// 스프링 시큐리티를 처리하기 전까지는 임시 아이디 사용
-		dto.setWriter("user1");
+		dto.setWriter(id);
 		
 		// 테이블에 댓글 저장
 		int newNo = service.register(dto);
@@ -47,7 +53,7 @@ public class CommentController {
 	}
 	
 	@DeleteMapping("/remove")
-	public Boolean remove(@RequestParam(name = "commentNo") int commentNo) {
+	public boolean remove(@RequestParam(name = "commentNo") int commentNo) {
 		
 		// 댓글 삭제
 		boolean result = service.remove(commentNo);

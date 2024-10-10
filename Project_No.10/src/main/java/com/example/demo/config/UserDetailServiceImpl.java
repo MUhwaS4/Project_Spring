@@ -30,7 +30,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
 		
 		// 회원이 있으면 로그인 성공, 없으면 실패
 		if (dto != null) {
-			// DTO -> 인증 객체로 변환 후 반환
+			// DTO -> 인증 객체로 변환 후 반환 (이 인증 객체를 main 화면 인증 객체 정보로 전달함)
 			return new CustomUser(dto);
 		} else {
 			// 에러 발생시키기

@@ -24,15 +24,27 @@ public class SecurityConfig {
 		// 게시물 관리와 댓글: ADMIN 또는 USER 권한을 가지고 있는 사람
 		// 회원 관리: ADMIN 권한을 가지고 있는 사람
 		http.authorizeRequests() // 사용은 가능하되 유지보수가 안 되기에 경고가 뜸
-			.requestMatchers("/register").permitAll()
-			.requestMatchers("/assets/*", "/css/*", "/js/*").permitAll()
+			.requestMatchers("/register").permitAll() // 회원가입 = 누구나 가능
+			.requestMatchers("/assets/*", "/css/*", "/js/*").permitAll() // 누구나 접근 가능한 프론트엔드 코드
 			.requestMatchers("/").authenticated()
 			.requestMatchers("/board").hasAnyRole("ADMIN", "USER")
 			.requestMatchers("/comment").hasAnyRole("ADMIN", "USER")
-			.requestMatchers("/member").hasAnyRole("ADMIN");
+			.requestMatchers("/member").hasAnyRole("ADMIN"); // 회원 목록 = 관리자만 열람 가능
 		
 		// 로그인 폼 화면 설정
-		http.formLogin();
+//		http.formLogin();
+		// +
+		// 로그인 화면과 로그인 처리 주소 설정
+		// 로그인 성공 시 이동할 주소 설정
+		http.formLogin()
+						.loginPage("/customlogin") // 로그인 시 이동할 화면
+						.loginProcessingUrl("/login") // 로그인 처리 주소
+						.successHandler((request, response, authentication)->{
+						// successHandler의 경우 람다식 함수로 처리
+						// 함수 내 매개변수는 successHandler > AuthenticationSuccessHandler로 이동 후 인터페이스 함수 사용
+							// 로그인 성공 시 설정한 주소(=메인 화면)으로 이동
+							response.sendRedirect("/");
+						});
 		
 		// 로그아웃 설정
 		http.logout();

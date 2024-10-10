@@ -2,6 +2,21 @@
 
 <th:block th:replace="~{layout/basic :: setContent(~{this::content})}">
 
-<h1 th:fragment="content">Main Page</h1>
+<th:block th:fragment="content">
+
+<!--인증 객체 정보-->
+<b>Authenticated DTO:</b>
+<div sec:authentication="principal"></div>
+
+<!-- 사용자 아이디 -->
+<b>Authenticated username:</b>
+<div sec:authentication="name"></div>
+
+<!-- 사용자가 가지고 있는 권한 -->
+<b>Authenticated user role:</b>
+<div sec:authentication="principal.authorities"></div>
 
 </th:block>
+
+<!-- 타임리프의 경우 th:요소를 사용 -->
+<!-- 시큐리티의 경우 sec: 요소를 사용 -->
